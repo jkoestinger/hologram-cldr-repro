@@ -59,7 +59,8 @@ defmodule HologramSkeleton.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
-      {:hologram, "~> 0.11.1"}
+      {:hologram, "~> 0.11.1"},
+      {:ex_cldr_dates_times, "~> 2.0"}
     ]
   end
 
