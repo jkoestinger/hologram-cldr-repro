@@ -10,7 +10,7 @@ HOLOGRAM_START=1 mix compile
 grep -o 'defineFunctionClauseHeads("Cldr[^"]*","[a-z_]*",[0-9]' priv/static/hologram/runtime-*.js
 
 # Parsing it (without running it) needs about 868 KB of stack. Without ex_cldr it needs about 48 KB.
-node --stack-size=700 -e "new (require('vm').Script)(require('fs').readFileSync(process.argv[1], 'utf8'))" $(ls priv/static/hologram/runtime-*.js | grep -v map)
+node --stack-size=700 -e "new (require('vm').Script)(require('fs').readFileSync(process.argv[1], 'utf8'))" priv/static/hologram/runtime-*.js
 # => RangeError: Maximum call stack size exceeded
 ```
 
